@@ -515,6 +515,7 @@
 				BA7DD22F1E1B97B9002877EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA7DD2301E1B97B9002877EA /* Build configuration list for PBXNativeTarget "JSContextDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +524,7 @@
 				BA7DD2321E1B97B9002877EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA7DD2331E1B97B9002877EA /* Build configuration list for PBXNativeTarget "JSContextDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +533,7 @@
 				BA7DD2351E1B97B9002877EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
