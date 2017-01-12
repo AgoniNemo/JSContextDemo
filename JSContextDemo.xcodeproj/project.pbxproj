@@ -16,6 +16,8 @@
 		BA7DD21E1E1B97B9002877EA /* JSContextDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7DD21D1E1B97B9002877EA /* JSContextDemoTests.m */; };
 		BA7DD2291E1B97B9002877EA /* JSContextDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7DD2281E1B97B9002877EA /* JSContextDemoUITests.m */; };
 		BA7DD2371E1B97DD002877EA /* text.html in Resources */ = {isa = PBXBuildFile; fileRef = BA7DD2361E1B97DD002877EA /* text.html */; };
+		BA800A481E27504A00176A7B /* JSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = BA800A471E27504A00176A7B /* JSObject.m */; };
+		BA800A4B1E27513500176A7B /* JSContextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA800A4A1E27513500176A7B /* JSContextViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,10 @@
 		BA7DD22A1E1B97B9002877EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA7DD2361E1B97DD002877EA /* text.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = text.html; sourceTree = "<group>"; };
 		BA7DD2381E1B97ED002877EA /* JSExportDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSExportDelegate.h; sourceTree = "<group>"; };
+		BA800A461E27504A00176A7B /* JSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObject.h; sourceTree = "<group>"; };
+		BA800A471E27504A00176A7B /* JSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSObject.m; sourceTree = "<group>"; };
+		BA800A491E27513500176A7B /* JSContextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSContextViewController.h; sourceTree = "<group>"; };
+		BA800A4A1E27513500176A7B /* JSContextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSContextViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,10 +112,13 @@
 			children = (
 				BA7DD2361E1B97DD002877EA /* text.html */,
 				BA7DD2381E1B97ED002877EA /* JSExportDelegate.h */,
+				BA800A451E27504A00176A7B /* JSObject */,
 				BA7DD2061E1B97B8002877EA /* AppDelegate.h */,
 				BA7DD2071E1B97B8002877EA /* AppDelegate.m */,
 				BA7DD2091E1B97B8002877EA /* ViewController.h */,
 				BA7DD20A1E1B97B8002877EA /* ViewController.m */,
+				BA800A491E27513500176A7B /* JSContextViewController.h */,
+				BA800A4A1E27513500176A7B /* JSContextViewController.m */,
 				BA7DD20C1E1B97B9002877EA /* Main.storyboard */,
 				BA7DD20F1E1B97B9002877EA /* Assets.xcassets */,
 				BA7DD2111E1B97B9002877EA /* LaunchScreen.storyboard */,
@@ -143,6 +152,15 @@
 				BA7DD22A1E1B97B9002877EA /* Info.plist */,
 			);
 			path = JSContextDemoUITests;
+			sourceTree = "<group>";
+		};
+		BA800A451E27504A00176A7B /* JSObject */ = {
+			isa = PBXGroup;
+			children = (
+				BA800A461E27504A00176A7B /* JSObject.h */,
+				BA800A471E27504A00176A7B /* JSObject.m */,
+			);
+			path = JSObject;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +298,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA7DD20B1E1B97B8002877EA /* ViewController.m in Sources */,
+				BA800A481E27504A00176A7B /* JSObject.m in Sources */,
+				BA800A4B1E27513500176A7B /* JSContextViewController.m in Sources */,
 				BA7DD2081E1B97B8002877EA /* AppDelegate.m in Sources */,
 				BA7DD2051E1B97B8002877EA /* main.m in Sources */,
 			);
