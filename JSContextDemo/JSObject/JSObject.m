@@ -10,11 +10,21 @@
 
 @implementation JSObject
 
--(NSString *)getAccessToken
+- (instancetype)initWithDelegate:(id<JSExportDelegate>)scriptDelegate
 {
-    
-    return @"这就是传说中的Token";
+    if (self == [super init]) {
+        _scriptDelegate = scriptDelegate;
+    }
+    return self;
 }
 
+-(NSString *)getAccessToken
+{
+    return @"这是js的token";
+}
 
+-(void)dealloc
+{
+    NSLog(@"JSObject被释放了!!!");
+}
 @end

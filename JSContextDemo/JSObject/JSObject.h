@@ -11,5 +11,7 @@
 
 @interface JSObject : NSObject<JSExportDelegate>
 
+@property (nonatomic, weak) id<JSExportDelegate> scriptDelegate;
+- (instancetype)initWithDelegate:(id<JSExportDelegate>)scriptDelegate;
 
 @end

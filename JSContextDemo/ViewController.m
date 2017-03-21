@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "JSContextViewController.h"
+#import "JSObject.h"
 
 @interface ViewController ()<UIWebViewDelegate>
 
@@ -20,6 +21,8 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     [self createItem];
+    
+
 }
 
 -(void)createItem{

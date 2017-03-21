@@ -17,7 +17,7 @@
 #define SCREENHEIGHT [UIScreen mainScreen].bounds.size.height
 #define SCREEN [UIScreen mainScreen].bounds
 
-@interface JSContextViewController ()<UIWebViewDelegate>
+@interface JSContextViewController ()<UIWebViewDelegate,JSExportDelegate>
 
 @property (nonatomic ,strong) UIWebView *webView;
 
@@ -39,7 +39,10 @@
     [self createJSContext];
         
 }
-
+-(NSString *)getAccessToken
+{
+    return @"这就是VC的token";
+}
 #pragma mark - UIWebView
 
 -(void)webViewDidStartLoad:(UIWebView *)webView
@@ -76,6 +79,7 @@
 }
 -(void)dealloc{
     NSLog(@"我被释放了!!!");
+
 }
 
 - (void)didReceiveMemoryWarning {
