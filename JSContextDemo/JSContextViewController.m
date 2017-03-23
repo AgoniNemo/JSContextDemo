@@ -17,9 +17,10 @@
 #define SCREENHEIGHT [UIScreen mainScreen].bounds.size.height
 #define SCREEN [UIScreen mainScreen].bounds
 
-@interface JSContextViewController ()<UIWebViewDelegate,JSExportDelegate>
-
+@interface JSContextViewController ()<UIWebViewDelegate>
+@property (nonatomic ,copy) void(^block)();
 @property (nonatomic ,strong) UIWebView *webView;
+
 
 @end
 
@@ -39,10 +40,7 @@
     [self createJSContext];
         
 }
--(NSString *)getAccessToken
-{
-    return @"这就是VC的token";
-}
+
 #pragma mark - UIWebView
 
 -(void)webViewDidStartLoad:(UIWebView *)webView
@@ -73,11 +71,20 @@
         NSLog(@"error: %@", value);
     }];
     
-    JSObject *obj = [[JSObject alloc] init];
-    context[@"iOS"] = obj;
+    /**
+     *  错误的方法（引用的obj对象会造成内存泄漏）
+        JSObject *obj = [[JSObject alloc] init];
+        context[@"iOS"] = obj;
+     */
+    
+    context[@"iOS"] = (NSString *)^(NSString *text) {
+        return @"这是js的token";
+    };
     
 }
+
 -(void)dealloc{
+    
     NSLog(@"我被释放了!!!");
 
 }
