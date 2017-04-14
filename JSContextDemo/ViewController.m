@@ -22,7 +22,12 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self createItem];
     
-
+    NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://59.37.42.4:8090/headPortraitDownload?path=D:\\im\\img\\headPortrait\100517036101.png"]];
+    UIImage *image = [UIImage imageWithData:data];
+    
+    UIImageView *imageV = [[UIImageView alloc] initWithImage:image];
+    imageV.frame = CGRectMake(0, 100, image.size.width, image.size.width*667/375);
+    [self.view addSubview:imageV];
 }
 
 -(void)createItem{
@@ -42,6 +47,10 @@
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView:leftbtn];
     self.navigationItem.leftBarButtonItem = leftItem;
      */
+}
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self action];
 }
 -(void)backAction{
 

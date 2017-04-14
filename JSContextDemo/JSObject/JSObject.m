@@ -10,17 +10,10 @@
 
 @implementation JSObject
 
-- (instancetype)initWithDelegate:(id<JSExportDelegate>)scriptDelegate
-{
-    if (self == [super init]) {
-        _scriptDelegate = scriptDelegate;
-    }
-    return self;
-}
 
 -(NSString *)getAccessToken
 {
-    return @"这是js的token";
+    return @"这是JSObject的token";
 }
 
 -(void)dealloc
